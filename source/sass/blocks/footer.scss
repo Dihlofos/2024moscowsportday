@@ -1,0 +1,248 @@
+.footer {
+  position: relative;
+  z-index: 5;
+  padding: 5.5rem 0 8rem;
+  color: $white;
+  background-color: $purple;
+
+  @media (max-width: $tablet) {
+    padding: 125px 0 55px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 200px 0 55px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    transition: color 0.3s ease-in-out;
+
+    &.footer__policy-link {
+      opacity: 0.3;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+
+      @media (max-width: $tablet) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 11px;
+      }
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__title {
+    margin: 0 0 5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 35px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 6px;
+    }
+  }
+
+  &__description {
+    font-size: 1.86rem;
+    line-height: 2.4rem;
+
+    p {
+      margin: 0 0 2.5rem;
+    }
+
+    ul {
+      padding: 0 0 0 3rem;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 580px;
+      margin: 0;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 11px;
+      line-height: 14px;
+      max-width: 330px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $mobile) {
+      gap: 13px;
+      margin: 0 0 35px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 4rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 20px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0px 0 32px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__emails {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 45.2%;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      width: 80%;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 1.76rem;
+      line-height: 2.4rem;
+    }
+
+    a {
+      font-size: 2.4rem;
+      line-height: 3.8rem;
+    }
+
+    @media (max-width: $tablet) {
+      span {
+        font-size: 13px;
+        line-height: 17px;
+      }
+
+      a {
+        font-size: 23px;
+        line-height: 45px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      span {
+        font-size: 11px;
+        line-height: 14px;
+      }
+      a {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+  }
+
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 49.7%;
+
+    @media (max-width: $tablet) {
+      margin: 42px 0 0;
+      width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 46px 0 0;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+
+  &__logos {
+    position: relative;
+    display: flex;
+    gap: 3.2rem;
+    z-index: 2;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      top: 45px;
+      right: 24px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 72px;
+      right: auto;
+      left: 18px;
+      gap: 29px;
+    }
+  }
+
+  &__logo {
+    transition: 0.2s color ease-in;
+
+    img {
+      width: auto;
+      height: 64px;
+
+      @media (max-width: $tablet) {
+        height: 70px;
+      }
+
+      @media (max-width: $tablet) {
+        height: 60px;
+      }
+    }
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+
+}
