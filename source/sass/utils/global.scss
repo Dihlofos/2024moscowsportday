@@ -9,6 +9,10 @@ html {
     @include font(7px, 7px, 400);
   }
 
+  @media (max-width: $tablet) {
+    @include font(10px, 10px, 400);
+  }
+
 }
 
 
@@ -20,7 +24,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   font-family: $myriad;
-  background-color: $grey;
+  background-color: $bgcolor;
   color: $white;
   overflow-x: hidden;
   display: flex;
@@ -62,4 +66,13 @@ img {
 .grecaptcha-badge {
   opacity: 0;
   pointer-events: none;
+}
+
+
+.red {
+  background-color: $red;
+}
+
+.purple {
+  background-color: $purple;
 }

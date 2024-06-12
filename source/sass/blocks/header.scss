@@ -1,12 +1,12 @@
 .header {
 
   .container {
-    max-width: 140rem;
+    max-width: 116rem;
   }
 
   &__nav {
     position: relative;
-    padding: 2rem 12.7rem 0 0;
+    padding: 2rem 0 0 0;
     flex-shrink: 0;
     z-index: 2;
 
@@ -16,31 +16,6 @@
 
   }
 
-  &__decor-circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: $orange;
-    top: -18.8rem;
-    left: 49.5%;
-    transform: translateX(-50%);
-    width: 43.7rem;
-    height: 43.7rem;
-    z-index: 1;
-
-    @media (max-width: $tablet) {
-      top: -50px;
-      left: auto;
-      right: -237px;
-      width: 277px;
-      height: 277px;
-    }
-
-    @media (max-width: $mobile) {
-      top: -129px;
-      right: -336px;
-    }
-
-  }
 
   &__content {
     display: flex;
@@ -58,11 +33,9 @@
   &__logos {
     position: relative;
     display: flex;
-    gap: 2.9rem;
-    padding: 5.5rem 0 0 3.3rem;
+    gap: 2.2rem;
+    padding: 1.9rem 0;
     z-index: 2;
-
-
 
     @media (max-width: $tablet) {
       align-self: center;
@@ -81,7 +54,6 @@
 
     img {
       width: auto;
-      height: 64px;
 
       @media (max-width: $tablet) {
         height: 70px;

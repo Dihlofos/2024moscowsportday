@@ -1,0 +1,47 @@
+.people {
+  width: 100%;
+  overflow: visible;
+
+  &__slider {
+    position: relative;
+    overflow: visible;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    cursor: pointer;
+
+    .disabled & {
+      display: none;
+    }
+
+    &--prev {
+      left: -0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  &__slide {
+    width: 33%;
+  }
+
+  &__slide-title {
+    color: $purple;
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0 0 3rem;
+    text-align: center;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+}

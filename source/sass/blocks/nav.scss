@@ -71,14 +71,8 @@
     border: none;
   }
 
-  &__decor {
-    position: absolute;
-    bottom: -78px;
-    right: -79px;
-  }
-
   &__item {
-    margin: 0 0.8rem;
+    margin: 0 1.3rem;
 
     @media (max-width: $tablet) {
       margin: 0 8px;
@@ -94,7 +88,7 @@
     color: $black;
     text-decoration: none;
     transition: 0.2s color ease-in;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.9rem;
 
     @media (max-width: $tablet) {

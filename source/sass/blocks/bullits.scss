@@ -1,285 +1,121 @@
 .bullits {
-  padding: 9.5rem 0 0;
-
-  @media (max-width: $tablet) {
-    padding: 0;
-  }
-
-  @media (max-width: $mobile) {
-    padding: 54px 0 0;
-  }
-
-  .container {
-    position: relative;
-    max-width: 140rem;
-  }
-
-  &__left-decor {
-    position: absolute;
-    top: -1.9rem;
-    left: -20rem;
-    width: 35.5rem;
-    height: 31.2rem;
-
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
-
-  &__right-decor {
-    position: absolute;
-    top: -1.3rem;
-    right: -22rem;
-    width: 37.5rem;
-    height: 32.6rem;
-
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
+  position: relative;
+  padding-bottom: 7.4rem;
+  z-index: 7;
 
   &__list {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
 
-    &--tablet {
-      display: none;
-    }
-
-    &--mobile {
-      display: none;
-    }
-
-    @media (max-width: $tablet) {
-      flex-wrap: wrap;
-      &--desktop {
-        display: none;
-      }
-
-      &--tablet {
-        display: flex;
-      }
-    }
-
-    @media (max-width: $mobile) {
-
-      &--tablet {
-        display: none;
-      }
-
-      &--mobile {
-        display: flex;
-      }
-
-    }
-  }
-
-  &__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  &__tablet {
-    color: $white;
-    background-color: $red;
-    text-transform: uppercase;
-    padding: 1.1rem 1.6rem;
-    border-radius: 36px;
-    font-size: 1.8rem;
-
-    &--purple {
-      background-color: $purple;
-    }
-  }
-
-  &__text {
-    font-family: $mossport;
-    text-transform: uppercase;
-    font-size: 4.2rem;
-    line-height: 1;
-    margin: 0 0 1.6rem;
-  }
-
-  &__blue-link {
-    cursor: pointer;
-
-    rect {
-      transition: all 0.3s ease-in-out;
-    }
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 31.7rem;
+    height: 30.7rem;
 
-    img, svg {
-      max-width: unset;
-      display: block;
-      overflow: visible;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      pointer-events: none;
+      user-select: none;
+      border-radius: 36px;
     }
 
-    &--retro {
-      width: 28%;
-      top: -1.5rem;
-      margin-left: 6.5rem;
-      z-index: 1;
+    &--white {
+      color: $purple;
 
-      img, svg {
-        width: 39.8rem;
-        height: 39.9rem;
-      }
-
-      @media (max-width: $tablet) {
-        width: 53%;
-        margin: 0;
-        top: 12px;
-        right: -23px;
-        z-index: 5;
-
-        img, svg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      @media (max-width: $mobile) {
-        top: 0;
-        right: 5px;
-        width: 50%;
-
-        img, svg {
-          width: 138%;
-          height: auto;
-        }
-      }
-
-
-    }
-
-    &--hundred {
-      width: 22%;
-      margin-left: -3.5rem;
-      top: -6.4rem;
-      z-index: 2;
-
-      img, svg {
-        width: 43.6rem;
-        height: 43.6rem;
-      }
-
-      @media (max-width: $tablet) {
-        width: 46%;
-        margin: 0;
-        top: 30px;
-        left: -44px;
-
-        img, svg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      @media (max-width: $mobile) {
-        top: 5px;
-        left: 2px;
-        width: 50%;
-
-        img, svg {
-          width: 127%;
-          height: auto;
-        }
+      &:before {
+        background-color: $white;
+        transform: rotate(8deg) translateX(1.1rem);
       }
     }
 
-    &--fun {
-      width: 25%;
-      z-index: 1;
-      margin-left: -2rem;
-      top: -9rem;
-
-      img, svg {
-        width: 42.3rem;
-        height: 42.4rem;
+    &--purple {
+      &:before {
+        background-color: $purple;
+        transform: rotate(-8deg) translateX(0.7rem);
       }
-
-      @media (max-width: $tablet) {
-        width: 47%;
-        top: 0;
-        z-index: 2;
-        margin: -144px 0 0;
-        right: -13px;
-
-        img, svg {
-          width: 100%;
-          height: 100%;
-
-        }
-      }
-
-      @media (max-width: $mobile) {
-        top: 0;
-        right: 31px;
-        width: 50%;
-        margin: -113px 0 0;
-
-        img, svg {
-          width: 129%;
-          height: auto;
-        }
-      }
-
     }
 
-    &--hits {
-      width: 25%;
-      z-index: 3;
-      margin-left: -4.2rem;
-      top: -4rem;
-
-      img, svg {
-        width: 40.6rem;
-        height: 41.2rem;
+    &--3 {
+      &:before {
+        transform: rotate(8deg) translateX(0.7rem);
+        z-index: 7;
       }
+    }
 
-      @media (max-width: $tablet) {
-        width: 53%;
-        margin: 0;
-        top: 0;
-        z-index: 4;
-        margin-top: -56px;
-        right: 15px;
-
-        img, svg {
-          width: 100%;
-          height: 100%;
-        }
+    &--4 {
+      &:before {
+        transform: rotate(-8deg) translateX(-1.4rem);
       }
-
-      @media (max-width: $mobile) {
-        top: 0;
-        right: -6px;
-        width: 50%;
-        margin: -50px 0 0;
-
-        img, svg {
-          width: 147%;
-          height: auto;
-        }
-      }
-
     }
   }
+
+
+  &__item-title {
+    position: relative;
+    text-transform: uppercase;
+    font-family: $mossport;
+    font-size: 4.2rem;
+    line-height: 1;
+    color: inherit;
+    z-index: 8;
+    text-align: center;
+
+    .bullits__item--1 & {
+      margin: 6.8rem 0 0 2rem;
+    }
+
+    .bullits__item--2 & {
+      margin: 6.8rem 0 0 1rem;
+    }
+
+    .bullits__item--3 & {
+      margin: 6.8rem 0 0 2rem;
+    }
+
+    .bullits__item--4 & {
+      margin: 7rem 2.5rem 0 0rem;
+    }
+  }
+
+  &__item-hashtag {
+    position: relative;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: inherit;
+    z-index: 8;
+    text-align: center;
+
+    .bullits__item--1 & {
+      margin: 0 0 9rem 2.2rem;
+    }
+
+    .bullits__item--2 & {
+      margin: 0 0 9rem 0.5rem;
+    }
+
+    .bullits__item--3 & {
+      margin: 0 0 9rem 2.2rem;
+    }
+
+    .bullits__item--4 & {
+      margin: 0 2.5rem 6rem 0;
+    }
+
+  }
+
 
 
 }
