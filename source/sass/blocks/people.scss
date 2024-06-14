@@ -7,6 +7,12 @@
     overflow: visible;
   }
 
+  &__wrapper {
+    @media (max-width: $tablet) {
+      gap: 1rem;
+    }
+  }
+
   &__arrow {
     position: absolute;
     top: 50%;
@@ -24,10 +30,21 @@
     &--next {
       right: 0;
     }
+
+    @media (max-width: $tablet) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   &__slide {
     width: 33%;
+
+    @media (max-width: $tablet) {
+      img {
+        max-width: 21.5rem;
+      }
+    }
   }
 
   &__slide-title {
@@ -41,6 +58,10 @@
 
     &--white {
       color: $white;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 2.4rem;
     }
   }
 

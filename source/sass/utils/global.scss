@@ -2,19 +2,17 @@ html {
   @include font(10px, 10px, 400);
 
   @media (max-width: $desktop) {
-    @include font(8px, 8px, 400);
+    @include font(10px, 10px, 400);
   }
 
   @media (max-width: $laptop) {
-    @include font(7px, 7px, 400);
+    @include font(8px, 8px, 400);
   }
 
   @media (max-width: $tablet) {
     @include font(10px, 10px, 400);
   }
-
 }
-
 
 body {
   @include font(1.6rem, 2.1rem, 400);

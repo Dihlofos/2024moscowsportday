@@ -1,19 +1,30 @@
 .concert {
-
-
   .container {
     position: relative;
     padding: 9.8rem 0 5rem;
+
+    @media (max-width: $tablet) {
+      padding: 4.8rem 2.4rem 5rem;
+    }
   }
 
   &__decor {
     position: absolute;
     top: 0;
     right: 0.2rem;
+
+    @media (max-width: $tablet) {
+      width: 23.3rem;
+      right: 2.2rem;
+    }
   }
 
   &__title {
     margin: 0 0 6rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 3.5rem;
+    }
   }
 
   &__time {
@@ -21,12 +32,32 @@
     align-items: center;
     gap: 4rem;
     margin: 0 0 4rem;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
   }
+
+  &__clock {
+    @media (max-width: $tablet) {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0 0 1.2rem;
+    }
+  }
+
+
 
   &__time-text {
     font-family: $mossport;
     text-transform: uppercase;
     font-size: 7.5rem;
+
+    @media (max-width: $tablet) {
+      font-size: 3.5rem;
+    }
   }
 
   &__description {
@@ -35,6 +66,12 @@
     justify-content: space-between;
     font-size: 2.6rem;
     margin: 0 0 9.5rem;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+      position: relative;
+      margin: 0 0 4.5rem;
+    }
   }
 
   &__tag {
@@ -46,6 +83,22 @@
     letter-spacing: 0.1rem;
     padding: 1.2rem 1.1rem;
     text-transform: uppercase;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      left: 18rem;
+      top: -6.3rem;
+      width: 14.6rem;
+      font-size: 1.4rem;
+      padding: 0;
+      height: 2.4rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0;
+      padding-top: 0.3rem;
+    }
 
   }
 

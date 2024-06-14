@@ -3,6 +3,10 @@
   padding-bottom: 7.4rem;
   z-index: 7;
 
+  @media (max-width: $tablet) {
+    padding-bottom: 7rem;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
@@ -30,6 +34,10 @@
       pointer-events: none;
       user-select: none;
       border-radius: 36px;
+
+      @media(max-width: $tablet) {
+        border-radius: 21px;
+      }
     }
 
     &--white {
@@ -39,6 +47,8 @@
         background-color: $white;
         transform: rotate(8deg) translateX(1.1rem);
       }
+
+
     }
 
     &--purple {
@@ -60,6 +70,14 @@
         transform: rotate(-8deg) translateX(-1.4rem);
       }
     }
+
+
+    @media(max-width: $tablet) {
+      width: 19rem;
+      height: 18.4rem;
+
+
+    }
   }
 
 
@@ -73,21 +91,43 @@
     z-index: 8;
     text-align: center;
 
+    @media(max-width: $tablet) {
+      font-size: 2.5rem;
+    }
+
     .bullits__item--1 & {
       margin: 6.8rem 0 0 2rem;
+
+      @media(max-width: $tablet) {
+        margin: 4.3rem 0 0 1.5rem;
+      }
     }
 
     .bullits__item--2 & {
       margin: 6.8rem 0 0 1rem;
+
+      @media(max-width: $tablet) {
+        margin: 4.5rem 0 0 0.2rem;
+      }
     }
 
     .bullits__item--3 & {
       margin: 6.8rem 0 0 2rem;
+
+      @media(max-width: $tablet) {
+        margin: 4.5rem 0 0 1.2rem;
+      }
     }
 
     .bullits__item--4 & {
       margin: 7rem 2.5rem 0 0rem;
+
+      @media(max-width: $tablet) {
+        margin: 4.3rem 1.4rem 0 0rem;
+      }
     }
+
+
   }
 
   &__item-hashtag {
@@ -100,18 +140,38 @@
 
     .bullits__item--1 & {
       margin: 0 0 9rem 2.2rem;
+
+      @media(max-width: $tablet) {
+        margin: 0 0 5.2rem 1.5rem;
+      }
     }
 
     .bullits__item--2 & {
       margin: 0 0 9rem 0.5rem;
+
+      @media(max-width: $tablet) {
+        margin: 0 0 5.2rem 0.4rem;
+      }
     }
 
     .bullits__item--3 & {
       margin: 0 0 9rem 2.2rem;
+
+      @media(max-width: $tablet) {
+        margin: 0 0 5.2rem 1.4rem;
+      }
     }
 
     .bullits__item--4 & {
       margin: 0 2.5rem 6rem 0;
+
+      @media(max-width: $tablet) {
+        margin: 0 1.5rem 3.5rem 0;
+      }
+    }
+
+    @media(max-width: $tablet) {
+      font-size: 1.9rem;
     }
 
   }

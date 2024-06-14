@@ -46,8 +46,8 @@
       },
 
       744: {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: "auto",
+        spaceBetween: 15,
         draggable: true,
         allowTouchMove: true,
         speed: 300,

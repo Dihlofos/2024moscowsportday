@@ -46,24 +46,6 @@
       }
     }
 
-    // .swiper-slide {
-    //     width: 31.8rem !important;
-    //     height:  39.1rem !important;
-
-    //     &.swiper-slide-last {
-    //       width: 15rem !important;
-    //     }
-
-    //   @media (max-width: $mobile) {
-    //     width: 100% !important;
-    //     height: auto !important;
-
-    //     &.swiper-slide-last {
-    //       width: 0 !important;
-    //       display: none;
-    //     }
-    //   }
-    // }
 
     &__slide-inner {
       display: flex;
@@ -76,7 +58,7 @@
       text-align: center;
 
       @media (max-width: $mobile) {
-        width: 280px;
+        width: 28rem;
         height: 100%;
         margin: 0 auto;
       }
@@ -89,8 +71,8 @@
         font-weight: 700;
 
         @media (max-width: $mobile) {
-          font-size: 20px;
-          margin: 22px 0 5px;
+          font-size: 2rem;
+          margin: 2.2rem 0 0.5rem;
         }
       }
 
@@ -100,7 +82,7 @@
         margin: 0;
 
         @media (max-width: $mobile) {
-          font-size: 16px;
+          font-size: 1.6rem;
         }
       }
 
@@ -111,7 +93,7 @@
         height: 31.7rem;
 
         @media (max-width: $mobile) {
-          height: 280px;
+          height: 28rem;
         }
       }
     }
@@ -134,14 +116,14 @@
       }
 
       @media (max-width: $tablet) {
-        padding: 60px 0 0;
-        width: 20px;
+        padding: 6rem 0 0;
+        width: 2rem;
       }
 
       @media (max-width: $mobile) {
-        width: 24px;
-        height: 280px;
-        padding: 123px 0 0;
+        width: 2.4rem;
+        height: 28rem;
+        padding: 12.3rem 0 0;
       }
 
       svg {
@@ -173,7 +155,7 @@
       }
 
       @media (max-width: $mobile) {
-        right: 20px;
+        right: 2rem;
       }
     }
 

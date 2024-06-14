@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $tablet) {
-    padding: 40px 17px 0 0;
+    padding: 1.33rem 1rem 0 0;
   }
 
   @media (max-width: $mobile) {
@@ -53,20 +53,20 @@
     margin: 0 -0.8rem;
 
     @media (max-width: $tablet) {
-      margin: 0 -8px;
+      margin: 0 -0.8rem;
     }
 
     @media (max-width: $mobile) {
       margin: 0;
       flex-direction: column;
-      gap: 25px;
+      gap: 2.5rem;
     }
   }
 
   &__close {
     position: absolute;
-    top: 26px;
-    right: 22px;
+    top: 2.6rem;
+    right: 2.2rem;
     background: none;
     border: none;
   }
@@ -75,7 +75,7 @@
     margin: 0 1.3rem;
 
     @media (max-width: $tablet) {
-      margin: 0 8px;
+      margin: 0 0.8rem;
     }
 
     @media (max-width: $mobile) {
@@ -92,13 +92,13 @@
     line-height: 1.9rem;
 
     @media (max-width: $tablet) {
-      font-size: 15px;
-      line-height: 19px;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
     }
 
     @media (max-width: $mobile) {
       font-family: $mossport;
-      font-size: 36px;
+      font-size: 3.6rem;
       line-height: 1;
       text-transform: uppercase;
       color: $white;

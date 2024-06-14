@@ -25,11 +25,17 @@
     }
 
     @media (max-width: $tablet) {
-      height: 48px;
-      font-size: 38px;
+      height: 3.3rem;
+      font-size: 2.4rem;
       width: 100%;
       border-width: 2px;
       border-radius: 36px;
+
+      &:hover,
+      &:active {
+        background-color: $white;
+        color: $red;
+      }
     }
 
     @media(max-width: $mobile) {

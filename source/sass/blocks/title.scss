@@ -11,4 +11,9 @@
   &--white {
     color: $white;
   }
+
+  @media (max-width: $tablet) {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
 }
