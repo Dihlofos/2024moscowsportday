@@ -116,7 +116,7 @@
 
   setTimeout(() => {
     mapScroller?.scroll({ left: 275 });
-  }, 0);
+  }, 500);
 
   figures.forEach((figure) => {
     figure.addEventListener("click", () => {
