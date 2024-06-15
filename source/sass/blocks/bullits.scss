@@ -7,11 +7,21 @@
     padding-bottom: 7rem;
   }
 
+  @media(max-width: $mobile) {
+    padding-bottom: 4.5rem;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
 
   }
 
@@ -23,6 +33,15 @@
     justify-content: space-between;
     width: 31.7rem;
     height: 30.7rem;
+
+    @media(max-width: $tablet) {
+      width: 19rem;
+      height: 18.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 50%;
+    }
 
     &:before {
       content: '';
@@ -38,17 +57,24 @@
       @media(max-width: $tablet) {
         border-radius: 21px;
       }
+
+      @media (max-width: $mobile) {
+        border-radius: 20px;
+        width: 95%;
+        height: 86%;
+      }
     }
 
     &--white {
       color: $purple;
-
       &:before {
         background-color: $white;
         transform: rotate(8deg) translateX(1.1rem);
+
+        @media (max-width: $mobile) {
+          transform: rotate(8deg) translateX(1rem);
+        }
       }
-
-
     }
 
     &--purple {
@@ -58,10 +84,29 @@
       }
     }
 
+    &--2 {
+      @media (max-width: $mobile) {
+        &:before {
+          left: -8px;
+        }
+      }
+    }
+
     &--3 {
       &:before {
         transform: rotate(8deg) translateX(0.7rem);
         z-index: 7;
+      }
+
+      @media (max-width: $mobile) {
+        color: $white;
+        margin-top: -2.8rem;
+
+        &:before {
+          background-color: $purple;
+          transform: rotate(-8deg) translateX(0.7rem);
+          width: 97%;
+        }
       }
     }
 
@@ -69,14 +114,18 @@
       &:before {
         transform: rotate(-8deg) translateX(-1.4rem);
       }
-    }
 
+      @media (max-width: $mobile) {
+        color: $purple;
+        margin-top: -2.8rem;
+        z-index: 8;
 
-    @media(max-width: $tablet) {
-      width: 19rem;
-      height: 18.4rem;
+        &:before {
+          background-color: $white;
+          transform: rotate(8deg) translateX(-0.3rem);
 
-
+        }
+      }
     }
   }
 
@@ -95,11 +144,19 @@
       font-size: 2.5rem;
     }
 
+    @media(max-width: $mobile) {
+      font-size: 2.4rem;
+    }
+
     .bullits__item--1 & {
       margin: 6.8rem 0 0 2rem;
 
       @media(max-width: $tablet) {
         margin: 4.3rem 0 0 1.5rem;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 3.9rem 0 0 0.7rem;
       }
     }
 
@@ -109,6 +166,11 @@
       @media(max-width: $tablet) {
         margin: 4.5rem 0 0 0.2rem;
       }
+
+      @media(max-width: $mobile) {
+        margin: 4rem 0 0 -1.4rem;
+        max-width: 18.5rem;
+      }
     }
 
     .bullits__item--3 & {
@@ -116,6 +178,10 @@
 
       @media(max-width: $tablet) {
         margin: 4.5rem 0 0 1.2rem;
+      }
+
+      @media(max-width: $mobile) {
+        margin: 3.8rem 0 0 0.5rem;
       }
     }
 
@@ -125,9 +191,11 @@
       @media(max-width: $tablet) {
         margin: 4.3rem 1.4rem 0 0rem;
       }
+
+      @media (max-width: $mobile) {
+        margin: 4rem 0.7rem 0 0;
+      }
     }
-
-
   }
 
   &__item-hashtag {
@@ -144,6 +212,10 @@
       @media(max-width: $tablet) {
         margin: 0 0 5.2rem 1.5rem;
       }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 7.2rem 0.5rem;
+      }
     }
 
     .bullits__item--2 & {
@@ -151,6 +223,10 @@
 
       @media(max-width: $tablet) {
         margin: 0 0 5.2rem 0.4rem;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 7.5rem -1.5rem;
       }
     }
 
@@ -160,6 +236,10 @@
       @media(max-width: $tablet) {
         margin: 0 0 5.2rem 1.4rem;
       }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 7.5rem 1rem;
+      }
     }
 
     .bullits__item--4 & {
@@ -168,10 +248,19 @@
       @media(max-width: $tablet) {
         margin: 0 1.5rem 3.5rem 0;
       }
+
+      @media(max-width: $mobile) {
+        max-width: 10rem;
+        margin: 0 1rem 6rem 0;
+      }
     }
 
     @media(max-width: $tablet) {
       font-size: 1.9rem;
+    }
+
+    @media(max-width: $mobile) {
+      font-size: 1.4rem;
     }
 
   }

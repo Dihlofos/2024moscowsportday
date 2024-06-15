@@ -38,7 +38,7 @@
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 16,
         draggable: true,
         allowTouchMove: true,
@@ -260,6 +260,7 @@
     reinitSlider(
       document.querySelector(`[data-content-index="${locationNumber}"]`)
     );
+
     contentsEls.forEach((item) => {
       const contentIndex = item.dataset.contentIndex;
       if (Number(contentIndex) === Number(locationNumber)) {
@@ -331,7 +332,7 @@
     const wrapper = slider.querySelector(".swiper-wrapper");
     const id = slider.id;
 
-    if (wrapper.childNodes.length > 3) {
+    if (wrapper.childNodes.length > 3 && vw >= 744) {
       setTimeout(() => {
         new Swiper(`#${id}`, {
           // Optional parameters

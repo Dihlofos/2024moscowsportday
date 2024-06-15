@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile) {
-    padding: 20.5rem 0 9rem;
+    padding: 1.5rem 0 6.8rem;
 
     .container {
       padding: 0;
@@ -49,7 +49,7 @@
     }
 
     @media (max-width: $mobile) {
-      max-width: 12.42rem;
+      max-width: 124.2rem;
       width: 363%;
     }
   }
@@ -65,7 +65,7 @@
   &__map-wrapper {
     @media (max-width: $mobile) {
       overflow-x: auto;
-      padding-top: 4.5rem;
+      padding-top: 6.5rem;
 
       &::-webkit-scrollbar {
         -webkit-appearance: none;
@@ -138,8 +138,8 @@
 
     @media (max-width: $mobile) {
       width: calc(100% - 3.2rem);
-      padding: 3.6rem;
-      top: 29.1rem;
+      //padding: 3.6rem;
+      top: 26.7rem;
       left: 1.6rem;
     }
 
@@ -160,7 +160,7 @@
     }
 
     @media (max-width: $mobile) {
-      margin: 0 0 2.6rem;
+      margin: 0 0 1.6rem;
     }
   }
 
@@ -177,9 +177,14 @@
 
     @media (max-width: $tablet) {
       top: 1.8rem;
-      right: 1.6rem;
+      right: 1.8rem;
       width: 3rem;
       height: 3rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -195,8 +200,6 @@
     }
 
     @media (max-width: $mobile) {
-      font-size: 3.1rem;
-      line-height: 1;
     }
   }
 
@@ -247,7 +250,12 @@
     @media (max-width: $mobile) {
       height: auto;
       column-count: 1;
+      padding: 6rem 1.6rem 0;
     }
+  }
+
+  &__mobile-arrows {
+    margin: 2rem auto 0;
   }
 
   &__list-item {

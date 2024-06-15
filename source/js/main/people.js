@@ -1,12 +1,10 @@
 "use strict";
 (function () {
   const slider = document.querySelector(".js-people-slider-concert-container");
-
+  const vw = window.innerWidth;
   const wrapper = slider.querySelector(".swiper-wrapper");
 
-  console.log(wrapper.childNodes);
-
-  if (wrapper.childNodes.length > 3) {
+  if (wrapper.childNodes.length > 3 && vw >= 744) {
     new Swiper(`.js-people-slider-concert`, {
       // Optional parameters
       slidesPerView: 3,

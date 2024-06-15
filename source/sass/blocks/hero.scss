@@ -10,6 +10,10 @@
     @media (max-width: $tablet) {
       padding: 8.5rem 0 10rem;
     }
+
+    @media (max-width: $mobile) {
+      padding: 4rem 0 10rem;
+    }
   }
 
   &__bottom {
@@ -17,6 +21,10 @@
 
     @media (max-width: $tablet) {
       padding: 4.2rem 0 8.3rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 2.6rem 0 5.3rem;
     }
 
   }
@@ -29,6 +37,12 @@
       padding-left: 7.8rem;
       width: 91%;
     }
+
+    @media(max-width: $mobile) {
+      padding-left: 0;
+      width: 76%;
+      border-left: 0;
+    }
   }
 
   &__info {
@@ -36,6 +50,10 @@
 
     @media(max-width: $tablet) {
       margin: 0 0 6rem;
+    }
+
+    @media(max-width: $mobile) {
+      margin: 0 0 4rem;
     }
   }
   &__decor {
@@ -53,6 +71,14 @@
       top: -14.5rem;
       right: -1.5rem;
       width: 59%;
+    }
+
+    @media (max-width: $mobile) {
+      top: -16.5rem;
+      right: -2rem;
+      width: 70%;
+
+      max-width: 35rem
     }
   }
 
@@ -72,6 +98,14 @@
         margin: 0 0 3.8rem;
       }
     }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.8rem;
+
+      &:first-child {
+        margin: 0 0 2.6rem;
+      }
+    }
   }
 
   &__info-text {
@@ -82,9 +116,16 @@
 
     @media (max-width: $tablet) {
       width: 100%;
+      font-size: 3.5rem;
 
       br {
         display: none;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      br {
+        display: inline;
       }
     }
   }
@@ -100,6 +141,11 @@
     margin-top: 1.5rem;
     text-transform: uppercase;
 
+    &--mobile {
+        display: none;
+
+    }
+
     @media (max-width: $tablet) {
       position: absolute;
       right: 0;
@@ -107,7 +153,19 @@
       font-size: 2.4rem;
       margin: 0;
       padding: 0.8rem 1.8rem;
+    }
 
+    @media (max-width: $mobile) {
+      display: none;
+      position: relative;
+      width: auto;
+
+      &--mobile {
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+        padding: 0.6rem 1.8rem;
+      }
     }
   }
 
@@ -120,16 +178,11 @@
     }
   }
 
-  &__info-text {
-    @media (max-width: $tablet) {
-      font-size: 3.5rem;
-    }
-  }
-
   &__description {
     font-size: 2.6rem;
     line-height: 1;
     max-width: 66rem;
+    color: $bgcolor;
 
     p {
       margin: 0 0 3rem;
@@ -147,7 +200,11 @@
         margin: 0 0 1rem;
       }
     }
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+      margin-top: 4.1rem;
+
+    }
   }
-
-
 }

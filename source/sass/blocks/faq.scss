@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile) {
-    padding: 11.5rem 0 12.7rem;
+    padding: 9rem 0 6.5rem;
   }
 
   &__title {
@@ -21,7 +21,7 @@
     }
 
     @media (max-width: $mobile) {
-      margin: 0 0 2rem;
+      margin: 0 0 2.4rem;
     }
   }
 
@@ -43,10 +43,10 @@
     }
 
     @media (max-width: $mobile) {
-      padding: 0 0 2.4rem;
+      padding: 0 0 1.6rem;
 
       &:first-child {
-        padding: 1.4rem 0 2.6rem;
+        padding: 1.4rem 0 1.4rem;
       }
     }
   }
@@ -77,11 +77,12 @@
     }
 
     @media (max-width: $mobile) {
-      font-size: 3.1rem;
+      font-size: 2.4rem;
       line-height: 1.1;
       text-align: left;
       align-items: flex-start;
       gap: 1rem;
+      padding-right: 3rem;
     }
 
     &.active {
@@ -116,14 +117,20 @@
     @media (max-width: $tablet) {
       position: absolute;
       right: 0;
-      top: -1.5rem;
+      top: -0.5rem;
       width: 2.7rem;
       height: 2.7rem;
       margin: 0 0 0 5rem;
+
+      img {
+        width: 2.7rem;
+        height: 2.7rem;
+      }
     }
 
     @media (max-width: $mobile) {
       margin: 0 0 0 1rem;
+      top: 1rem;
     }
   }
 
@@ -142,6 +149,11 @@
       line-height: 1;
       margin: 2rem 0 0;
       padding: 0 0 .7rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+      margin: 2.5rem 0 0;
     }
 
     &.active {

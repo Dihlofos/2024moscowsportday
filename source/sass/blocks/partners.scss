@@ -8,6 +8,10 @@
     @media (max-width: $tablet) {
       margin: 0 0 3.3rem;
     }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4rem;
+    }
   }
 
   &__wrapper {
@@ -16,6 +20,11 @@
 
     @media (max-width: $tablet) {
       gap: 6.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 0;
     }
   }
 
@@ -30,6 +39,12 @@
       bottom: 3.1rem;
       width: 31.7rem;
     }
+
+    @media (max-width: $mobile) {
+      right: -1.9rem;
+      bottom: 2.1rem;
+      width: 34rem;
+    }
   }
 
   &__content {
@@ -37,6 +52,10 @@
 
     @media (max-width: $tablet) {
       padding: 3.5rem 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 2.8rem 1.6rem 0;
     }
   }
 
@@ -54,7 +73,7 @@
       max-width: 46.5rem;
 
       &:not(:last-child) {
-        margin: 0 0 9.8rem;
+        margin: 0 0 9rem;
       }
     }
   }

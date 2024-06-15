@@ -7,9 +7,37 @@
     overflow: visible;
   }
 
+  .swiper-container {
+    @media (max-width: $mobile) {
+      width: calc(100% + 3.2rem);
+      margin: 0 -1.6rem;
+    }
+  }
+
   &__wrapper {
     @media (max-width: $tablet) {
       gap: 1rem;
+    }
+
+    @media(max-width: $mobile) {
+      margin: 0 0 1.3rem;
+      gap: 2.5rem;
+      padding: 0 1.6rem;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+
+      overflow: auto;
+    }
+  }
+
+  &__mobile-arrows {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -43,6 +71,14 @@
     @media (max-width: $tablet) {
       img {
         max-width: 21.5rem;
+      }
+    }
+
+    @media(max-width: $mobile) {
+      width: 26rem;
+
+      img {
+        max-width: 26rem;
       }
     }
   }
