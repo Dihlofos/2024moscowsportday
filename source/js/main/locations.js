@@ -70,29 +70,30 @@
   const figures = map.querySelectorAll(".figure");
 
   const locations = {
-    1: "Зона экстремальных видов спорта",
-    2: "Марафоны тренировок",
-    3: "Фан-встречи и автограф-сессии",
-    4: "Стритбол",
-    5: "Стантрайдинг",
-    6: "Настольный теннис",
-    7: "Шахматы",
-    8: "Массовый турнир по мини-футболу",
-    9: "Массовая тренировка по стретчингу",
-    10: "Кубик Рубика",
-    11: "Паркур",
-    12: "Детская зона",
-    13: "Зона футбольного клуба «Локомотив»",
-    14: "Зона экстремальных видов спорта",
-    15: "Фестиваль фигурного катания",
-    16: "Настольные игры",
-    17: "Брейк-данс",
-    18: "Настольные игры",
-    19: "Зона экстремальных видов спорта",
-    20: "Фехтование",
-    21: "Фехтование",
-    22: "Фехтование",
-    23: "Фехтование",
+    figure_1: "Зона экстремальных видов спорта",
+    "figure_1-1": "Мотофристайл",
+    figure_2: "Марафоны тренировок",
+    figure_3: "Фан-встречи",
+    figure_4: "Стритбол",
+    figure_5: "Стантрайдинг",
+    figure_6: "Настольный теннис",
+    figure_7: "Шахматы",
+    figure_8: "Массовый турнир по мини-футболу",
+    figure_9: "Массовая тренировка по стретчингу",
+    figure_10: "Кубик Рубика",
+    figure_11: "Воркаут",
+    figure_13: "Брейк-данс",
+    figure_14: "Детская зона и беговелы",
+    figure_15: "Зона футбольных клубов",
+    figure_16: "Настольные игры",
+    figure_18: "Фестиваль фигурного катания",
+    "figure_18-1": "Мастер-класс Этери Тутберидзе",
+    figure_19: "Рыболовный спорт",
+    figure_20: "Стронгмен",
+    figure_21: "Чемпионат России по битбоксу",
+    figure_22: "Концерт",
+    figure_23: "Сбершатер",
+    figure_24: "Фуд-корт Депо",
   };
 
   // Функция для генерации
@@ -106,9 +107,9 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ["2", "15", "34"];
+  const numbersWithoutAction = ["23", "24"];
 
-  const concertNumber = "31";
+  const concertNumber = "22";
   const artObject = "2";
   const footballNumber = "30";
   const vw = window.innerWidth;
@@ -161,6 +162,9 @@
         onFigureClick(figure);
       });
     });
+    setTimeout(() => {
+      reinitSlider(document.querySelector(`[data-content-index="1"]`));
+    }, 300);
   }
 
   function onFigureClick(figure) {
@@ -218,9 +222,10 @@
   }
 
   function openModal(locationNumber) {
-    if (!locations[locationNumber]) return;
+    const locationText = locations[`figure_${locationNumber}`];
+    if (!locationText) return;
 
-    modalText.textContent = locations[locationNumber];
+    modalText.textContent = locationText;
     modalGoTo.dataset.locationNumber = locationNumber;
     mapModal.classList.add("is-active");
   }
@@ -297,9 +302,13 @@
     const container = document.querySelector(".js-legend-list");
     const locationsArray = Object.entries(locations);
 
-    locationsArray.forEach(([index, value]) => {
-      const figure = document.querySelector(`.figure_${index}`);
+    console.log("locationsArray", locationsArray);
+
+    locationsArray.forEach(([selector, value]) => {
+      const figure = document.querySelector(`.${selector}`);
       // не показываем локации, которых нет на карте.
+      const index = selector.split("_")[1];
+      console.log("index", index);
       if (!figure) return;
 
       const itemLi = document.createElement("li");
@@ -314,7 +323,7 @@
         onFigureClick(figure);
       });
 
-      itemSpan.textContent = `${index}.`;
+      itemSpan.textContent = `${index.split("-").join(".")}.`;
       itemP.textContent = value;
       itemLi.append(itemSpan);
       itemLi.append(itemP);

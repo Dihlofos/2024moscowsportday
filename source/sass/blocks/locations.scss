@@ -24,7 +24,7 @@
       margin: 0px 0 6.7rem;
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       margin: 0px 0 5.7rem;
     }
   }
@@ -208,8 +208,19 @@
       }
     }
 
+    b {
+      display: inline-block;
+      margin: 0 2rem 0 0;
+    }
+
     p {
       margin: 0 0 3rem;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.2;
     }
 
     a {
@@ -422,6 +433,19 @@
         min-height: 11.1rem;
       }
 
+      &.smaller {
+        font-size: 3rem;
+        line-height: 1;
+
+        @media (max-width: $tablet) {
+          font-size: 2.2rem;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 2.2rem;
+        }
+      }
+
     }
 
     &--two-lines {
@@ -470,7 +494,7 @@
   &__block-description {
     font-size: 2rem;
     line-height: 1.1;
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
     color: $white;
 
     @media (max-width: $tablet) {
@@ -525,7 +549,7 @@
     color: $purple;
     font-family: $mossport;
     font-size: 3.5rem;
-    line-height: .8;
+    line-height: 1;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;

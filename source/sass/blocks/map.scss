@@ -91,9 +91,12 @@
 
 
       g {
+        position: relative;
         cursor: pointer;
+        z-index: 2;
 
         &.is-active {
+          z-index: 5;
           rect,
           .rect {
             fill: $red;
@@ -103,8 +106,6 @@
           path {
             fill: $white;
           }
-
-
         }
       }
   }
@@ -250,12 +251,18 @@
     @media (max-width: $mobile) {
       height: auto;
       column-count: 1;
-      padding: 6rem 1.6rem 0;
+      padding: 5.5rem 1.6rem 0;
     }
   }
 
   &__mobile-arrows {
-    margin: 2rem auto 0;
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+      margin: 1.5rem auto 0;
+    }
+
   }
 
   &__list-item {

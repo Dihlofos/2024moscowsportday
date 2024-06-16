@@ -74,3 +74,11 @@ img {
 .purple {
   background-color: $purple;
 }
+
+.justify-align-center {
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
+
+
+}

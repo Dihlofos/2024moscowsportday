@@ -73,6 +73,13 @@
       max-width: 46.5rem;
 
       &:not(:last-child) {
+        margin: 0 0 10rem;
+      }
+    }
+
+    @media (max-width: $mobile) {
+
+      &:not(:last-child) {
         margin: 0 0 9rem;
       }
     }
