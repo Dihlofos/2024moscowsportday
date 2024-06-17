@@ -250,8 +250,9 @@
 
     @media (max-width: $mobile) {
       height: auto;
-      column-count: 1;
+      column-count: auto;
       padding: 5.5rem 1.6rem 0;
+      max-height: initial;
     }
   }
 
