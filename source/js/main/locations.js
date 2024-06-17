@@ -70,30 +70,30 @@
   const figures = map.querySelectorAll(".figure");
 
   const locations = {
-    figure_1: "Зона экстремальных видов спорта",
-    "figure_1-1": "Мотофристайл",
-    figure_2: "Марафоны тренировок",
-    figure_3: "Фан-встречи",
-    figure_4: "Стритбол",
-    figure_5: "Стантрайдинг",
-    figure_6: "Настольный теннис",
-    figure_7: "Шахматы",
-    figure_8: "Массовый турнир по мини-футболу",
-    figure_9: "Массовая тренировка по стретчингу",
-    figure_10: "Кубик Рубика",
-    figure_11: "Воркаут",
-    figure_13: "Брейк-данс",
-    figure_14: "Детская зона и беговелы",
-    figure_15: "Зона футбольных клубов",
-    figure_16: "Настольные игры",
-    figure_18: "Фестиваль фигурного катания",
-    "figure_18-1": "Мастер-класс Этери Тутберидзе",
-    figure_19: "Рыболовный спорт",
-    figure_20: "Стронгмен",
-    figure_21: "Чемпионат России по битбоксу",
-    figure_22: "Концерт",
-    figure_23: "Сбершатер",
-    figure_24: "Фуд-корт Депо",
+    1: "Зона экстремальных видов спорта",
+    2: "Мотофристайл",
+    3: "Марафоны тренировок",
+    4: "Фан-встречи",
+    5: "Стритбол",
+    6: "Стантрайдинг",
+    7: "Настольный теннис",
+    8: "Шахматы",
+    9: "Массовый турнир по мини-футболу",
+    10: "Массовая тренировка по стретчингу",
+    11: "Кубик Рубика",
+    12: "Воркаут",
+    13: "Брейк-данс",
+    14: "Детская зона и беговелы",
+    15: "Зона футбольных клубов",
+    16: "Настольные игры",
+    17: "Фестиваль фигурного катания",
+    18: "Мастер-класс Этери Тутберидзе",
+    19: "Рыболовный спорт",
+    20: "Стронгмен",
+    21: "Чемпионат России по битбоксу",
+    22: "Концерт",
+    23: "Сбершатер",
+    24: "Фуд-корт Депо",
   };
 
   // Функция для генерации
@@ -110,8 +110,7 @@
   const numbersWithoutAction = ["23", "24"];
 
   const concertNumber = "22";
-  const artObject = "2";
-  const footballNumber = "30";
+  const motofreestyle = "2";
   const vw = window.innerWidth;
   // ACTIONS
 
@@ -185,10 +184,6 @@
       modalGoTo.href = "#locations";
     }
 
-    if (locationNumber === footballNumber) {
-      modalGoTo.href = "https://mfl.life/";
-    }
-
     if (numbersWithoutAction.includes(locationNumber)) {
       modalGoTo.classList.add("is-hidden");
     }
@@ -222,11 +217,11 @@
   }
 
   function openModal(locationNumber) {
-    const locationText = locations[`figure_${locationNumber}`];
-    if (!locationText) return;
+    if (!locations[locationNumber]) return;
 
-    modalText.textContent = locationText;
-    modalGoTo.dataset.locationNumber = locationNumber;
+    modalText.textContent = locations[locationNumber];
+    modalGoTo.dataset.locationNumber =
+      locationNumber === motofreestyle ? 1 : locationNumber;
     mapModal.classList.add("is-active");
   }
 
@@ -302,13 +297,9 @@
     const container = document.querySelector(".js-legend-list");
     const locationsArray = Object.entries(locations);
 
-    console.log("locationsArray", locationsArray);
-
-    locationsArray.forEach(([selector, value]) => {
-      const figure = document.querySelector(`.${selector}`);
+    locationsArray.forEach(([index, value]) => {
+      const figure = document.querySelector(`.figure_${index}`);
       // не показываем локации, которых нет на карте.
-      const index = selector.split("_")[1];
-      console.log("index", index);
       if (!figure) return;
 
       const itemLi = document.createElement("li");
@@ -323,7 +314,7 @@
         onFigureClick(figure);
       });
 
-      itemSpan.textContent = `${index.split("-").join(".")}.`;
+      itemSpan.textContent = `${index}.`;
       itemP.textContent = value;
       itemLi.append(itemSpan);
       itemLi.append(itemP);
