@@ -3,6 +3,10 @@
   padding: 5rem 0 12.7rem;
   overflow: hidden;
 
+  svg,button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   @media (max-width: $tablet) {
     padding: 1.6rem 0 6.8rem;
   }
