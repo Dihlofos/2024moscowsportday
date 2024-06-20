@@ -29,6 +29,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  padding-top: 6.5rem;
 
   @media (max-width: $laptop) {
     // шаблон медиа-запроса desktop-first
@@ -37,6 +38,8 @@ body {
   @media (min-resolution: $extra) {
     // шаблон для фонового изображения на экранах с повышенной плотностью пикселей
   }
+
+
 }
 
 button {
