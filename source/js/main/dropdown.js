@@ -2,8 +2,6 @@
 (function () {
   const dropdowns = document.querySelectorAll(".js-dropdown");
 
-  console.log("dropdowns", dropdowns);
-
   if (!dropdowns.length) {
     return;
   }
