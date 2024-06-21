@@ -78,8 +78,8 @@
     6: "Стантрайдинг",
     7: "Настольный теннис",
     8: "Шахматы",
-    9: "Массовый турнир по мини-футболу",
-    10: "Массовая тренировка по стретчингу",
+    9: "Мини-футбол",
+    10: "Стретчинг",
     11: "Кубик Рубика",
     12: "Воркаут",
     13: "Брейк-данс",
@@ -90,7 +90,7 @@
     18: "Мастер-класс Этери Тутберидзе",
     19: "Рыболовный спорт",
     20: "Стронгмен",
-    21: "Чемпионат России по битбоксу",
+    21: "Битбокс",
     22: "Концерт",
     23: "Сбершатер",
     24: "Фуд-корт Депо",
@@ -170,7 +170,6 @@
   function onFigureClick(figure) {
     modalGoTo.classList.remove("is-hidden");
     const locationNumber = figure.classList[1].split("_")[1];
-
     const mapOffset =
       document.getElementById("map").getBoundingClientRect().top +
       document.documentElement.scrollTop;
@@ -237,15 +236,22 @@
   }
 
   function onGoToLocation(locationNumber) {
-    if (numbersWithoutAction.includes(locationNumber)) {
+    let number = locationNumber;
+    if (numbersWithoutAction.includes(number)) {
       return;
     }
 
-    if (locationNumber === concertNumber) return;
-    toggleContent(locationNumber);
+    if (number === concertNumber) return;
+    console.log(typeof number, number);
+    if (number === "18") {
+      number = "17";
+    }
+
+    toggleContent(number);
+
     closeModal();
 
-    swiperSlider.slideTo(getSlideIndex(locationNumber));
+    swiperSlider.slideTo(getSlideIndex(number));
     // добавить скролл
   }
 

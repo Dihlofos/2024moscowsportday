@@ -81,6 +81,12 @@
     }
   }
 
+  &__block-description {
+    b {
+      color: $purple;
+    }
+  }
+
   &__blocks-container {
 
     &.container {
@@ -215,12 +221,17 @@
 
     p {
       margin: 0 0 3rem;
+
+      &:last-of-type {
+        margin: 0 0 2rem;
+      }
     }
 
     ul {
       padding: 0;
       list-style: none;
       line-height: 1.2;
+      margin: 1rem 0 1rem;
     }
 
     a {
