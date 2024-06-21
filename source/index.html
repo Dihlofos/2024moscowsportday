@@ -206,23 +206,23 @@
         </section>
         <section class="bullits red">
           <div class="container">
-            <ul class="bullits__list">
-              <li class="bullits__item bullits__item--white  bullits__item--1">
+            <div class="bullits__list">
+              <!-- <a class="bullits__item bullits__item--white  bullits__item--1 js-bullit js-scroll" data-scroll data-location-id="4" href="#locations">
                 <span class="bullits__item-title">Фан-встречи</span>
                 <span class="bullits__item-hashtag">#Личности</span>
-              </li>
-              <li class="bullits__item bullits__item--purple  bullits__item--2">
+              </a> -->
+              <a class="bullits__item bullits__item--purple  bullits__item--2 js-scroll" href="#concert" data-scroll>
                 <span class="bullits__item-title">День Московского спорта</span>
                 <span class="bullits__item-hashtag">#Концерт</span>
-              </li>
-              <li class="bullits__item bullits__item--white  bullits__item--3">
+              </a>
+              <a class="bullits__item bullits__item--white  bullits__item--3 js-bullit js-scroll" data-scroll data-location-id="14" href="#locations">
                 <span class="bullits__item-title">Семейные, детские,</br>спортивные зоны</span>
                 <span class="bullits__item-hashtag">#Год семьи</span>
-              </li>
-              <li class="bullits__item bullits__item--purple  bullits__item--4">
+              </button>
+              <a class="bullits__item bullits__item--purple  bullits__item--4 js-bullit js-scroll" data-scroll data-location-id="25" href="#locations">
                 <span class="bullits__item-title">Территория</br>спорта</span>
                 <span class="bullits__item-hashtag">#Спортивные площадки</span>
-              </li>
+              </button>
             </ul>
           </div>
         </section>
@@ -245,7 +245,7 @@
                 <div class="swiper-wrapper locations__thumbs-wrapper">
                   <div class="js-thumb swiper-slide locations__thumb is-active" data-thumb-index="1">Зона экстремальных видов спорта</div>
                   <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="3">Марафон тренировок</div>
-                  <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="4">Фан-встречи</div>
+                  <!-- <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="4">Фан-встречи</div> -->
                   <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="5">Стритбол</div>
                   <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="6">Стантрайдинг</div>
                   <div class="js-thumb swiper-slide locations__thumb" data-thumb-index="7">Настольный теннис</div>
@@ -285,12 +285,8 @@
                   <div class="swiper-container js-people-slider" id="extreme">
                     <div class="swiper-wrapper people__wrapper">
                       <div class="swiper-slide people__slide">
-                        <div class="people__slide-title">Павел Алехин</div>
-                        <img src="img/people/alehin.png" width="360" height="295"/>
-                      </div>
-                      <div class="swiper-slide people__slide">
-                        <div class="people__slide-title">Константин Андреев</div>
-                        <img src="img/people/andreev.png" width="360" height="295"/>
+                        <div class="people__slide-title">Даниэль Бодин</div>
+                        <img src="img/people/bodin.png" width="360" height="295"/>
                       </div>
                       <div class="swiper-slide people__slide">
                         <div class="people__slide-title">Алексей Колесников</div>
@@ -468,7 +464,7 @@
               </li>
             </ul>
             <!--4 "Фан встречи"-->
-            <div class="locations__blocks-content locations__blocks-content--big js-content" data-content-index="4">
+            <!-- <div class="locations__blocks-content locations__blocks-content--big js-content" data-content-index="4">
               <div class="locations__text-content locations__text-content--full-width">
                 <p>Уникальная возможность встретиться и&nbsp;пообщаться со&nbsp;своими кумирами из&nbsp;мира спорта. Не&nbsp;пропустите!</p>
                 <ul>
@@ -527,7 +523,7 @@
                   <img class="people__mobile-arrows" src="img/icons/arrows.svg" width="111" height="23" />
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!--5 Стритбол-->
             <div class="locations__blocks-content locations__blocks-content--big js-content" data-content-index="5">
@@ -647,26 +643,6 @@
                   <li><b>13:00</b>Начало любительского турнира;</li>
                   <li><b>14:00 - 17:00</b>Турниры для всех желающих.</li>
                 </ul>
-              </div>
-              <h4 class="locations__subtitle">приглашенные звезды</h4>
-              <div class="people locations__people js-people-slider-container">
-                <div class="people__slider">
-                  <div class="js-people-prev-extreme people__arrow people__arrow--prev">
-                    <img src="img/icons/arrow-left.svg" width="59" height="59"/>
-                  </div>
-                  <div class="swiper-container js-people-slider" id="extreme">
-                    <div class="swiper-wrapper people__wrapper justify-align-center">
-                      <div class="swiper-slide people__slide">
-                        <div class="people__slide-title">Анна Щербакова</div>
-                        <img src="img/people/anna.png" width="360" height="295"/>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="js-people-next-extreme people__arrow people__arrow--next">
-                    <img src="img/icons/arrow-right.svg" width="59" height="59"/>
-                  </div>
-                </div>
               </div>
               <h4 class="locations__subtitle">Активности локации</h4>
               <ul class="locations__blocks is-active">
@@ -811,7 +787,7 @@
                   <div class="js-people-prev-extreme people__arrow people__arrow--prev">
                     <img src="img/icons/arrow-left.svg" width="59" height="59"/>
                   </div>
-                  <div class="swiper-container js-people-slider" id="extreme">
+                  <div class="swiper-container js-people-slider" id="chess">
                     <div class="swiper-wrapper people__wrapper justify-align-center">
                       <div class="swiper-slide people__slide">
                         <div class="people__slide-title">Сергей Карякин</div>
@@ -826,6 +802,19 @@
               </div>
               <h4 class="locations__subtitle">Активности локации</h4>
               <ul class="locations__blocks is-active">
+                <li class="locations__block">
+                  <div class="locations__block-card">
+                    <div class="locations__block-card-top">
+                      <div class="locations__block-title">
+                        <p>Свободная игра</p>
+                        <p class="locations__block-count">11:00 — 18:00</p>
+                      </div>
+                      <div class="locations__block-description">Найти достойного соперника и&nbsp;оттачивать навыки? Легко! Во&nbsp;время свободной игры в&nbsp;шахматы.</div>
+                    </div>
+                    <div class="locations__block-card-bottom">
+                    </div>
+                  </div>
+                </li>
                 <li class="locations__block">
                   <div class="locations__block-card locations__block-card--red">
                     <div class="locations__block-card-top">
@@ -849,25 +838,14 @@
                         <p>Турнир семейных команд</p>
                         <p class="locations__block-count">12:00 — 15:00</p>
                       </div>
-                      <div class="locations__block-description">Примите участие в&nbsp;турнире в&nbsp;честь Года семьи: состав команды&nbsp;&mdash; 2&nbsp;человека из&nbsp;одной семьи. Регистрация на месте. Начало регистрации в 11:00.</div>
+                      <div class="locations__block-description">Примите участие в&nbsp;турнире в&nbsp;честь Года семьи: состав команды&nbsp;&mdash; 2&nbsp;человека из&nbsp;одной семьи. Начало регистрации в 11:00.</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
-                <li class="locations__block">
-                  <div class="locations__block-card">
-                    <div class="locations__block-card-top">
-                      <div class="locations__block-title">
-                        <p>Свободная игра</p>
-                        <p class="locations__block-count">11:00 — 18:00</p>
-                      </div>
-                      <div class="locations__block-description">Найти достойного соперника и&nbsp;оттачивать навыки? Легко! Во&nbsp;время свободной игры в&nbsp;шахматы.</div>
-                    </div>
-                    <div class="locations__block-card-bottom">
-                    </div>
-                  </div>
-                </li>
+
                 <li class="locations__block">
                   <div class="locations__block-card">
                     <div class="locations__block-card-top">
@@ -878,6 +856,7 @@
                       <div class="locations__block-description">Любите интеллектуальные поединки и&nbsp;считаете, что лучшее поле битвы&nbsp;&mdash; шахматное? Присоединяйтесь, чтобы насладиться изысканной игрой в&nbsp;компании единомышленников</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -891,6 +870,7 @@
                       <div class="locations__block-description">Любите интеллектуальные поединки и&nbsp;считаете, что лучшее поле битвы&nbsp;&mdash; шахматное? Присоединяйтесь, чтобы насладиться изысканной игрой в&nbsp;компании единомышленников</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -904,6 +884,7 @@
                       <div class="locations__block-description">Любите интеллектуальные поединки и&nbsp;считаете, что лучшее поле битвы&nbsp;&mdash; шахматное? Присоединяйтесь, чтобы насладиться изысканной игрой в&nbsp;компании единомышленников</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -1123,7 +1104,7 @@
                   <div class="js-people-prev-extreme people__arrow people__arrow--prev">
                     <img src="img/icons/arrow-left.svg" width="59" height="59"/>
                   </div>
-                  <div class="swiper-container js-people-slider" id="extreme">
+                  <div class="swiper-container js-people-slider" id="breakdance">
                     <div class="swiper-wrapper people__wrapper">
                       <div class="swiper-slide people__slide">
                         <div class="people__slide-title">Bboy Alkolil</div>
@@ -1159,6 +1140,7 @@
                       <div class="locations__block-description">Примите участие в&nbsp;баттле и&nbsp;покажите, кто тут лучший танцор. Bboys/bgirls до&nbsp;18&nbsp;лет. Регистрация на&nbsp;месте</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -1173,6 +1155,7 @@
                       <div class="locations__block-description">Примите участие в&nbsp;баттле и&nbsp;покажите, кто тут лучший танцор. От&nbsp;18&nbsp;лет. Регистрация на&nbsp;месте</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -1184,9 +1167,10 @@
                           All Style Best Show</p>
                         <p class="locations__block-count">11:00 — 18:30</p>
                       </div>
-                      <div class="locations__block-description">Баттл All Style best show&nbsp;&mdash; это лучшие командные выступления вне возрастов и&nbsp;стилей брейк-данса. Регистрация на&nbsp;месте. Условие&nbsp;&mdash; не&nbsp;менее 3&nbsp;человек в&nbsp;команде</div>
+                      <div class="locations__block-description">Баттл All Style best show&nbsp;&mdash; это лучшие командные выступления вне возрастов и&nbsp;стилей брейк-данса. Условие&nbsp;&mdash; не&nbsp;менее 3&nbsp;человек в&nbsp;команде</div>
                     </div>
                     <div class="locations__block-card-bottom">
+                      <div class="locations__spot-register button">Регистрация на месте</div>
                     </div>
                   </div>
                 </li>
@@ -1407,7 +1391,7 @@
                   <div class="js-people-prev-extreme people__arrow people__arrow--prev">
                     <img src="img/icons/arrow-left.svg" width="59" height="59"/>
                   </div>
-                  <div class="swiper-container js-people-slider" id="extreme">
+                  <div class="swiper-container js-people-slider" id="skating">
                     <div class="swiper-wrapper people__wrapper">
                       <div class="swiper-slide people__slide">
                         <div class="people__slide-title">Этери Тутберидзе</div>
@@ -1563,7 +1547,7 @@
                   <div class="js-people-prev-extreme people__arrow people__arrow--prev">
                     <img src="img/icons/arrow-left.svg" width="59" height="59"/>
                   </div>
-                  <div class="swiper-container js-people-slider" id="extreme">
+                  <div class="swiper-container js-people-slider" id="bitbox">
                     <div class="swiper-wrapper people__wrapper justify-align-center">
                       <div class="swiper-slide people__slide">
                         <div class="people__slide-title">Вахтанг</div>
@@ -1721,52 +1705,34 @@
                 <div class="swiper-container js-people-slider-concert">
                   <div class="swiper-wrapper people__wrapper">
                     <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Люся Чеботина</div>
-                      <img src="img/people/chebotina.png" width="360" height="295"/>
-                    </div>
-                    <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Анатолий Цой</div>
-                      <img src="img/people/tsoy.png" width="360" height="295"/>
-                    </div>
-                    <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Jony</div>
-                      <img src="img/people/jony.png" width="360" height="295"/>
+                      <div class="people__slide-title people__slide-title--white">Олег Майами</div>
+                      <img src="img/people/miami.png" width="360" height="295"/>
                     </div>
                     <div class="swiper-slide people__slide">
                       <div class="people__slide-title people__slide-title--white">Нюша</div>
                       <img src="img/people/nyusha.png" width="360" height="295"/>
                     </div>
                     <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Анна Седакова</div>
-                      <img src="img/people/sedakova.png" width="360" height="295"/>
-                    </div>
-                    <div class="swiper-slide people__slide">
                       <div class="people__slide-title people__slide-title--white">Пицца</div>
                       <img src="img/people/pizza.png" width="360" height="295"/>
                     </div>
                     <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Эльвира Т</div>
-                      <img src="img/people/elvira.png" width="360" height="295"/>
+                      <div class="people__slide-title people__slide-title--white">Винтаж</div>
+                      <img src="img/people/vintage.png" width="360" height="295"/>
                     </div>
                     <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Тося Чайкина</div>
-                      <img src="img/people/tosya.png" width="360" height="295"/>
+                      <div class="people__slide-title people__slide-title--white">Акмал</div>
+                      <img src="img/people/akmal.png" width="360" height="295"/>
                     </div>
+
                     <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Елена Темникова</div>
-                      <img src="img/people/temnikova.png" width="360" height="295"/>
+                      <div class="people__slide-title people__slide-title--white">Севиль</div>
+                      <img src="img/people/sevil.png" width="360" height="295"/>
                     </div>
+
                     <div class="swiper-slide people__slide">
                       <div class="people__slide-title people__slide-title--white">ST</div>
                       <img src="img/people/st.png" width="360" height="295"/>
-                    </div>
-                    <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Gayazov Brothers</div>
-                      <img src="img/people/gayazov.png" width="360" height="295"/>
-                    </div>
-                    <div class="swiper-slide people__slide">
-                      <div class="people__slide-title people__slide-title--white">Elman</div>
-                      <img src="img/people/elman.png" width="360" height="295"/>
                     </div>
                   </div>
 
@@ -2076,10 +2042,10 @@
                                 fill="#EB3333"
                             />
                         </g>
-                        <g class="figure figure_4" id="figure 4">
+                        <!-- <g class="figure figure_4" id="figure 4">
                             <rect id="Rectangle 409_5" x="643.966" y="422.358" width="31.3876" height="21.9167" transform="rotate(-0.264777 643.966 422.358)" fill="#EBEBEB" stroke="#EB3333" stroke-width="4.2342" />
                             <path id="4" d="M662.106 439.487H660.327V437.285H657.363V435.76L659.701 427.631H661.564L659.277 435.591H660.327V434.067L662.106 433.728V435.591H662.783V437.285H662.106V439.487Z" fill="#EB3333" />
-                        </g>
+                        </g> -->
                         <g class="figure figure_3" id="figure 3">
                             <rect id="Rectangle 383" x="474.394" y="344.694" width="54.9766" height="29.6005" fill="#EBEBEB" stroke="#EB3333" stroke-width="4.2342" />
                             <path
@@ -2300,6 +2266,8 @@
 
                 </div>
                 <a href="docs/policy.pdf" class="footer__policy-link" target="_blank">Политика конфиденциальности</a>
+                <a href="docs/dms_reject.docx" class="footer__policy-link" target="_blank">Отказ от претензий от участника</a>
+                <a href="docs/child_reject.docx" class="footer__policy-link" target="_blank">Отказ от претензий от опекуна ребенка</a>
 
               </div>
             </div>

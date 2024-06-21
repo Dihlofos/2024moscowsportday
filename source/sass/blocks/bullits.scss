@@ -33,6 +33,10 @@
     justify-content: space-between;
     width: 31.7rem;
     height: 30.7rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
 
     @media(max-width: $tablet) {
       width: 19rem;
@@ -78,6 +82,8 @@
     }
 
     &--purple {
+      color: $white;
+      text-decoration: none;
       &:before {
         background-color: $purple;
         transform: rotate(-8deg) translateX(0.7rem);

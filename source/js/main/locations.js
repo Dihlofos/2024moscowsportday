@@ -66,6 +66,7 @@
   const modalText = mapModal.querySelector(".js-map-modal-text");
   const modalGoTo = mapModal.querySelector(".js-map-modal-goto");
   const modalClose = mapModal.querySelector(".js-map-modal-close");
+  const bullitItems = document.querySelectorAll(".js-bullit");
 
   const figures = map.querySelectorAll(".figure");
 
@@ -73,7 +74,7 @@
     1: "Зона экстремальных видов спорта",
     2: "Мотофристайл",
     3: "Марафоны тренировок",
-    4: "Фан-встречи",
+    // 4: "Фан-встречи",
     5: "Стритбол",
     6: "Стантрайдинг",
     7: "Настольный теннис",
@@ -96,6 +97,8 @@
     24: "Фуд-корт Депо",
     25: "ГТО",
   };
+
+  console.log(window.location);
 
   // Функция для генерации
   function getURls() {
@@ -151,7 +154,9 @@
     const locationNumber = findGetParameter("locationId");
     const artObjectLinks = document.querySelectorAll(".js-art-object-link");
     if (locationNumber) {
-      onGoToLocation(locationNumber);
+      setTimeout(() => {
+        onGoToLocation(locationNumber);
+      }, 0);
     }
 
     // Собираем легенду.
@@ -165,6 +170,12 @@
     setTimeout(() => {
       reinitSlider(document.querySelector(`[data-content-index="1"]`));
     }, 300);
+
+    bullitItems.forEach((item) => {
+      item.addEventListener("click", (el) => {
+        onGoToLocation(el.currentTarget.dataset.locationId);
+      });
+    });
   }
 
   function onFigureClick(figure) {
@@ -242,7 +253,7 @@
     }
 
     if (number === concertNumber) return;
-    console.log(typeof number, number);
+
     if (number === "18") {
       number = "17";
     }

@@ -260,6 +260,15 @@
 
   }
 
+  &__spot-register {
+    font-size: 2.4rem;
+
+    &:hover {
+      background-color: $white;
+      color: $red;
+    }
+  }
+
   &__block {
     position: relative;
     width: 26rem;
