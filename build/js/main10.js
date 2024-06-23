@@ -123,7 +123,7 @@
     1: "Зона экстремальных видов спорта",
     2: "Мотофристайл",
     3: "Марафоны тренировок",
-    // 4: "Фан-встречи",
+    4: "Фан-встречи",
     5: "Стритбол",
     6: "Стантрайдинг",
     7: "Настольный теннис",
@@ -132,19 +132,25 @@
     10: "Стретчинг",
     11: "Кубик Рубика",
     12: "Воркаут",
-    13: "Брейк-данс",
-    14: "Детская зона и беговелы",
-    15: "Зона футбольных клубов",
-    16: "Настольные игры",
-    17: "Фестиваль фигурного катания",
-    18: "Мастер-класс Этери Тутберидзе",
-    19: "Рыболовный спорт",
-    20: "Стронгмен",
-    21: "Битбокс",
-    22: "Концерт",
-    23: "Сбершатер",
-    24: "Фуд-корт Депо",
-    25: "ГТО",
+    13: "Сбершатер",
+    14: "Брейк-данс",
+    15: "Детская зона",
+    16: "Зона футбольных клубов",
+    17: "Настольные игры",
+    18: "Фуд-корт Депо",
+    19: "Фестиваль фигурного катания",
+    20: "Мастер-класс Этери Тутберидзе",
+    21: "Рыболовный спорт",
+    22: "Стронгмен",
+    23: "Битбокс",
+    24: "Концерт",
+    25: "Чемпионат (партнёр)",
+    26: "Велобайк (партнёр)",
+    27: "Whoosh самокаты (партнёр)",
+    28: "ГТО",
+    29: "Мото‑шар",
+    30: "Этноспорт",
+    31: "ММА",
   };
 
   console.log(window.location);
@@ -160,10 +166,17 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ["23", "24"];
+  const numbersWithoutAction = ["13", "18"];
 
-  const concertNumber = "22";
-  const motofreestyle = "2";
+  const concertNumber = "24";
+  const extreemeNumbers = ["2", "29"];
+  const figureSkating = ["19", "20"];
+
+  const partnersLinks = {
+    25: "https://www.championat.com/",
+    26: "https://velobike.ru/",
+    27: "https://whoosh-bike.ru/",
+  };
   const vw = window.innerWidth;
   // ACTIONS
 
@@ -240,6 +253,9 @@
 
     if (locationNumber === concertNumber) {
       modalGoTo.href = "#concert";
+    } else if (Object.keys(partnersLinks).includes(locationNumber)) {
+      modalGoTo.target = "_blank";
+      modalGoTo.href = partnersLinks[locationNumber];
     } else {
       modalGoTo.href = "#locations";
     }
@@ -280,8 +296,21 @@
     if (!locations[locationNumber]) return;
 
     modalText.textContent = locations[locationNumber];
-    modalGoTo.dataset.locationNumber =
-      locationNumber === motofreestyle ? 1 : locationNumber;
+
+    let targetNumber = locationNumber;
+
+    // Change target zone if it is several zones in one slide.
+    // extrmr zone
+    if (extreemeNumbers.includes(locationNumber)) {
+      targetNumber = 1;
+    }
+
+    if (figureSkating.includes(locationNumber)) {
+      targetNumber = 19;
+    }
+
+    modalGoTo.dataset.locationNumber = targetNumber;
+
     mapModal.classList.add("is-active");
   }
 
@@ -302,10 +331,6 @@
     }
 
     if (number === concertNumber) return;
-
-    if (number === "18") {
-      number = "17";
-    }
 
     toggleContent(number);
 
