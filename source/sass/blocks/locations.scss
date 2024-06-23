@@ -507,6 +507,9 @@
     }
 
     @media (max-width: $mobile) {
+      br {
+        display: inline;
+      }
 
     }
   }
