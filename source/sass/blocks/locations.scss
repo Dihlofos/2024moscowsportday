@@ -4,6 +4,10 @@
   color: $black;
   z-index: 5;
 
+  .small-margin {
+    margin: 0 0 1rem;
+  }
+
   .container {
     position: relative;
   }
