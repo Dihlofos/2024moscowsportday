@@ -102,6 +102,7 @@
     29: "Мото‑шар",
     30: "Этноспорт",
     31: "ММА",
+    32: "Игры дружбы",
   };
 
   console.log(window.location);
@@ -117,7 +118,7 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ["13", "18"];
+  const numbersWithoutAction = ["13", "18", "29", "30", "31", "32"];
 
   const concertNumber = "24";
   const extreemeNumbers = ["2", "29"];
