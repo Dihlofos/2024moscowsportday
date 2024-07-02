@@ -82,6 +82,8 @@ img {
   @media (max-width: $mobile) {
     justify-content: center;
   }
+}
 
-
+.align-center {
+  align-items: center;
 }

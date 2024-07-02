@@ -132,7 +132,7 @@
     10: "Стретчинг",
     11: "Кубик-рубика",
     12: "Воркаут",
-    13: "СберМаркет и SberShop",
+    13: "Купер и SberShop",
     14: "Брейк-данс",
     15: "Детская зона",
     16: "Зона футбольных клубов",
@@ -149,8 +149,8 @@
     27: "Whoosh самокаты (партнёр)",
     28: "ГТО",
     29: "Мото‑шар",
-    30: "Этноспорт",
-    31: "ММА",
+    // 30: "Этноспорт",
+    // 31: "ММА",
     32: "Игры дружбы",
   };
 
@@ -419,31 +419,57 @@
     const cont = container.querySelector(".js-people-slider-container");
     const slider = container.querySelector(".js-people-slider");
 
-    if (!slider) {
+    const partnerSlider = container.querySelector(".js-partner-slider");
+
+    const wrapper = slider?.querySelector(".swiper-wrapper");
+    const partnersWrapper = partnerSlider?.querySelector(".swiper-wrapper");
+
+    if (wrapper) {
+      const id = slider.id;
+
+      if (wrapper.childNodes.length > 3 && vw >= 744) {
+        setTimeout(() => {
+          new Swiper(`#${id}`, {
+            // Optional parameters
+            slidesPerView: 3,
+            spaceBetween: 30,
+            initialSlide: 0,
+            draggable: false,
+            pagination: false,
+            loop: false,
+
+            navigation: {
+              nextEl: ".js-people-next-extreme",
+              prevEl: ".js-people-prev-extreme",
+            },
+          });
+        }, 300);
+      } else {
+        cont.classList.add("disabled");
+      }
       return;
     }
-    const wrapper = slider.querySelector(".swiper-wrapper");
-    const id = slider.id;
 
-    if (wrapper.childNodes.length > 3 && vw >= 744) {
-      setTimeout(() => {
-        new Swiper(`#${id}`, {
-          // Optional parameters
-          slidesPerView: 3,
-          spaceBetween: 30,
-          initialSlide: 0,
-          draggable: false,
-          pagination: false,
-          loop: false,
-
-          navigation: {
-            nextEl: ".js-people-next-extreme",
-            prevEl: ".js-people-prev-extreme",
-          },
-        });
-      }, 300);
-    } else {
-      cont.classList.add("disabled");
+    if (partnersWrapper) {
+      if (partnersWrapper?.childNodes.length > 3 && vw >= 744) {
+        setTimeout(() => {
+          new Swiper(`.js-partner-slider`, {
+            // Optional parameters
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            initialSlide: 0,
+            draggable: false,
+            pagination: false,
+            loop: false,
+            navigation: {
+              nextEl: ".js-people-next-concert",
+              prevEl: ".js-people-prev-concert",
+            },
+          });
+        }, 300);
+      } else {
+        cont.classList.add("disabled");
+      }
     }
   }
 })();

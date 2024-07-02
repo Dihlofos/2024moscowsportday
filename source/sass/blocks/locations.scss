@@ -12,6 +12,8 @@
     position: relative;
   }
 
+
+
   @media (max-width: $tablet) {
     padding: 3.1rem 0 0;
   }
@@ -71,6 +73,18 @@
     }
   }
 
+  &__partner-slide {
+    width: 20%;
+
+    &--last {
+      width: 3rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 15rem;
+
+    }
+  }
 
 
   &__title {
