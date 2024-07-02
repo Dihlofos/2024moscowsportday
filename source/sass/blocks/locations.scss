@@ -12,8 +12,6 @@
     position: relative;
   }
 
-
-
   @media (max-width: $tablet) {
     padding: 3.1rem 0 0;
   }
@@ -21,7 +19,6 @@
   @media (max-width: $mobile) {
     padding: 4rem 0 12.9rem;
   }
-
 
   &__header {
     margin: 0 0 7.3rem;
@@ -51,6 +48,66 @@
     }
   }
 
+
+
+  &__block-title {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $mossport;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 3.7rem;
+    margin: 0 0 1.4rem;
+    letter-spacing: 0.02em;
+
+    p {
+      margin: 0 0 1.4rem;
+
+      &:not(.locations__block-count) {
+        min-height: 11.1rem;
+      }
+
+      &.smaller {
+        font-size: 3rem;
+        line-height: 1;
+
+        @media (max-width: $tablet) {
+          font-size: 2.2rem;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 2.2rem;
+        }
+      }
+
+    }
+
+    &--two-lines {
+      min-height: initial;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 2.4rem;
+      line-height: 1;
+
+      br {
+        display: none;
+      }
+
+      p {
+        margin: 0 0 1.6rem;
+
+        &:not(.locations__block-count) {
+          min-height: unset;
+        }
+
+      }
+    }
+
+    @media (max-width: $mobile) {
+
+    }
+  }
   &__decor {
     position: absolute;
     top: -17.5rem;
@@ -136,6 +193,12 @@
 
     &.is-active {
       display: flex;
+    }
+
+    &--small-titles {
+      .locations__block-title p {
+        min-height: auto;
+      }
     }
 
 
@@ -455,64 +518,6 @@
     }
   }
 
-  &__block-title {
-    color: $white;
-    text-transform: uppercase;
-    font-family: $mossport;
-    font-weight: 700;
-    font-size: 3.5rem;
-    line-height: 3.7rem;
-    margin: 0 0 1.4rem;
-    letter-spacing: 0.02em;
-
-    p {
-      margin: 0 0 1.4rem;
-
-      &:not(.locations__block-count) {
-        min-height: 11.1rem;
-      }
-
-      &.smaller {
-        font-size: 3rem;
-        line-height: 1;
-
-        @media (max-width: $tablet) {
-          font-size: 2.2rem;
-        }
-
-        @media (max-width: $mobile) {
-          font-size: 2.2rem;
-        }
-      }
-
-    }
-
-    &--two-lines {
-      min-height: initial;
-    }
-
-    @media (max-width: $tablet) {
-      font-size: 2.4rem;
-      line-height: 1;
-
-      br {
-        display: none;
-      }
-
-      p {
-        margin: 0 0 1.6rem;
-
-        &:not(.locations__block-count) {
-          min-height: unset;
-        }
-
-      }
-    }
-
-    @media (max-width: $mobile) {
-
-    }
-  }
 
   &__block-count {
     color: $red;
